@@ -1,15 +1,15 @@
 {
-  "main.css": "PlayNine/static/css/main.b0f652e5.chunk.css",
-  "main.js": "PlayNine/static/js/main.015ed367.chunk.js",
-  "main.js.map": "PlayNine/static/js/main.015ed367.chunk.js.map",
-  "static/css/1.d720c60d.chunk.css": "PlayNine/static/css/1.d720c60d.chunk.css",
-  "static/js/1.a769798a.chunk.js": "PlayNine/static/js/1.a769798a.chunk.js",
-  "static/js/1.a769798a.chunk.js.map": "PlayNine/static/js/1.a769798a.chunk.js.map",
-  "runtime~main.js": "PlayNine/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "PlayNine/static/js/runtime~main.229c360f.js.map",
-  "static/css/1.d720c60d.chunk.css.map": "PlayNine/static/css/1.d720c60d.chunk.css.map",
-  "static/css/main.b0f652e5.chunk.css.map": "PlayNine/static/css/main.b0f652e5.chunk.css.map",
-  "index.html": "PlayNine/index.html",
-  "precache-manifest.be848819b5f92a399d58475832d3d507.js": "PlayNine/precache-manifest.be848819b5f92a399d58475832d3d507.js",
-  "service-worker.js": "PlayNine/service-worker.js"
+  "main.css": "/static/css/main.b0f652e5.chunk.css",
+  "main.js": "/static/js/main.015ed367.chunk.js",
+  "main.js.map": "/static/js/main.015ed367.chunk.js.map",
+  "static/css/1.d720c60d.chunk.css": "/static/css/1.d720c60d.chunk.css",
+  "static/js/1.a769798a.chunk.js": "/static/js/1.a769798a.chunk.js",
+  "static/js/1.a769798a.chunk.js.map": "/static/js/1.a769798a.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/css/1.d720c60d.chunk.css.map": "/static/css/1.d720c60d.chunk.css.map",
+  "static/css/main.b0f652e5.chunk.css.map": "/static/css/main.b0f652e5.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.be848819b5f92a399d58475832d3d507.js": "/precache-manifest.be848819b5f92a399d58475832d3d507.js",
+  "service-worker.js": "/service-worker.js"
 }
