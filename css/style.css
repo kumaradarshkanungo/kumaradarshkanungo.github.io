@@ -1,0 +1,17 @@
+/* Login Form */
+.reset_pass{
+    cursor: pointer;
+}
+
+#forgotPassword{
+    display: none;
+}
+
+#forgotPassword,.login_form{
+    z-index:22;
+    animation-delay:.1s
+}
+
+#forgotPassword h1:before,#forgotPassword h1:after {
+    width: 20%;
+}
