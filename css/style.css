@@ -15,3 +15,15 @@
 #forgotPassword h1:before,#forgotPassword h1:after {
     width: 20%;
 }
+
+/* Navbar */
+.site_title img{
+    border-radius: 20px;
+    content:url("../images/logo.ico");
+}
+
+.nav-sm .navbar.nav_title a img{
+    border-radius: 30px;
+    content:url("../images/logo\ 50X50.ico");
+    height: 45px;
+}
