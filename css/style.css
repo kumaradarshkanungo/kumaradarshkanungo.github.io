@@ -27,3 +27,23 @@
     content:url("../images/logo\ 50X50.ico");
     height: 45px;
 }
+
+/* General */
+ul.panel_toolbox>li {
+    float: right;
+}
+
+/* Dashboard */
+.x_content{
+    padding-left: 0;
+    padding-right: 0
+}
+
+/* Footer */
+.sidebar-footer a{
+    width: 33.33%;
+}
+
+.sidebar-footer a:hover span{
+    color: white
+}

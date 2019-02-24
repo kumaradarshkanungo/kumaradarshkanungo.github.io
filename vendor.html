@@ -42,7 +42,7 @@
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
               <ul class="nav side-menu">
-                  <li class="active"><a><i class="fa fa-home"></i>Dashboard</a>
+                  <li><a href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
                   <!-- <ul class="nav child_menu">
                       <li><a href="#">Submenu 1</a></li>
                       <li><a href="#">Submenu 2</a></li>
@@ -51,7 +51,7 @@
                   </li>
                   <li><a><i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="vendor.html">Vendors</a></li>
+                    <li class="active"><a href="vendor.html">Vendors</a></li>
                     <li><a href="#">Drivers</a></li>
                     <li><a href="#">Users</a></li>
                   </ul>
@@ -108,114 +108,18 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Dashboard</h3>
-              </div>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="">
-                  <div class="x_content">
-                    <div class="row">
-                      <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="tile-stats">
-                          <div class="icon"><i class="fa fa-cutlery"></i>
-                          </div>
-                          <div class="count">10</div>
-
-                          <h3>Total Vendors</h3>
-                          <!-- <p>Lorem ipsum psdea itgum rixt.</p> -->
-                        </div>
-                      </div>
-                      <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="tile-stats">
-                          <div class="icon"><i class="fa fa-truck"></i>
-                          </div>
-                          <div class="count">80</div>
-
-                          <h3>Total Drivers</h3>
-                          <!-- <p>Lorem ipsum psdea itgum rixt.</p> -->
-                        </div>
-                      </div>
-                      <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <div class="tile-stats">
-                          <div class="icon"><i class="fa fa-users"></i>
-                          </div>
-                          <div class="count">120</div>
-
-                          <h3>Total Users</h3>
-                          <!-- <p>Lorem ipsum psdea itgum rixt.</p> -->
-                        </div>
-                      </div>
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Vendors</h3>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <!-- Order graph -->
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Orders</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-filter"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a name="Year" onclick="drawOrderGraph(event.target.name)">Year</a>
-                          </li>
-                          <li><a name="Month" onclick="drawOrderGraph(event.target.name)">Month</a>
-                          </li>
-                          <li><a name="Week" onclick="drawOrderGraph(event.target.name)">Week</a>
-                          </li>
-                        </ul>
-                      </li>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content" id="order_graph_container">
-                    <div id="order_graph" style="width:100%; height:300px;"></div>
-                  </div>
+      
+                <div class="clearfix"></div>
+      
+                <div class="row">
                 </div>
-              </div>
-              <!-- /Order graph -->
-              <!-- Transaction graph -->
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Transaction</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-filter"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a name="Year" onclick="drawTxGraph(event.target.name)">Year</a>
-                          </li>
-                          <li><a name="Month" onclick="drawTxGraph(event.target.name)">Month</a>
-                          </li>
-                          <li><a name="Week" onclick="drawTxGraph(event.target.name)">Week</a>
-                          </li>
-                        </ul>
-                      </li>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content" id="tx_graph_container">
-                    <div id="tx_graph" style="width:100%; height:300px;"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- /Transaction graph -->
             </div>
-          </div>
         </div>
         <!-- /page content -->
 
@@ -246,7 +150,6 @@
     
     <!-- Custom Theme Scripts -->
     <script src="./js/custom.js"></script>
-    <script src="./js/dashboard.js"></script>
     <!-- <script>
     $(function(){
       document.addEventListener("click",handler,true);
