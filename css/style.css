@@ -39,6 +39,35 @@ ul.panel_toolbox>li {
     padding-right: 0
 }
 
+/* Vendor */
+.thumbnail{
+    height: auto;
+    max-width: 300px;
+}
+
+.thumbnail .image{
+    height: 150px;
+}
+
+.thumbnail img{
+    width: 100%; 
+    display: block;
+    height: 100%;
+}
+
+.vendor-name{
+    font-size: 17px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.cuisine-name {
+    color: #686b78;
+    font-size: 13px;
+    margin-top: 4px;
+    word-break: break-word;
+}
+
 /* Footer */
 .sidebar-footer a{
     width: 33.33%;
