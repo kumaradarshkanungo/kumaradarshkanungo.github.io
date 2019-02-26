@@ -111,7 +111,16 @@
             <div class="">
               <div class="page-title">
                   <div class="title_left">
-                      <h3>Vendors</h3>
+                      <h3 class="h3-title">Vendors</h3>
+                      <a href="addVendor.html" type="button" class="btn btn-round btn-add pull-right">Add</a>
+                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="vendor-search" placeholder="Search for vendors">
+                            <span class="input-group-btn">
+                              <button class="btn btn-default" type="button">Search</button>
+                            </span>
+                          </div>
+                        </div>
                   </div>
               </div>
     
@@ -124,18 +133,18 @@
   
                       <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">  
-                          <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="col-md-4 col-sm-4 col-xs-12 card-container">
                             <div class="thumbnail">
                               <div class="image view view-first">
                                 <img src="images/vendors/vendor1.jpg" alt="image" />
                               </div>
                               <div class="caption">
                                 <h5 class="vendor-name">Biriyani Joint</h5>
-                                <span class="cuisine-name">Biryani, Seafood, North Indian, Chinese, Desserts, Andhra, South Indian</span>
+                                <span class="cuisine-name">Biryani, Seafood, North Indian</span>
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="col-md-4 col-sm-4 col-xs-12 card-container">
                             <div class="thumbnail">
                               <div class="image view view-first">
                                 <img src="images/vendors/vendor2.jpg" alt="image" />
@@ -146,7 +155,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-4 col-sm-4 col-xs-12">
+                          <div class="col-md-4 col-sm-4 col-xs-12 card-container">
                             <div class="thumbnail">
                               <div class="image view view-first">
                                 <img src="images/vendors/vendor3.jpg" alt="image" />
@@ -159,7 +168,7 @@
                           </div>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12">
-                          <div class="col-md-4">
+                          <div class="col-md-4 col-sm-4 col-xs-12 card-container">
                             <div class="thumbnail">
                               <div class="image view view-first">
                                 <img src="images/vendors/vendor4.jpg" alt="image" />
@@ -170,7 +179,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-4">
+                          <div class="col-md-4 col-sm-4 col-xs-12 card-container">
                             <div class="thumbnail">
                               <div class="image view view-first">
                                 <img src="images/vendors/vendor5.jpg" alt="image" />
@@ -181,7 +190,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-4">
+                          <div class="col-md-4 col-sm-4 col-xs-12 card-container">
                             <div class="thumbnail">
                               <div class="image view view-first">
                                 <img src="images/vendors/vendor6.jpg" alt="image" />
@@ -225,10 +234,12 @@
     <script src="./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- morris.js -->
     <script src="./vendors/raphael/raphael.min.js"></script>
-    <script src="./vendors/morris.js/morris.min.js"></script>
     
     <!-- Custom Theme Scripts -->
     <script src="./js/custom.js"></script>
+    <script>
+      $("#vendor-search").focus();
+    </script>
     <!-- <script>
     $(function(){
       document.addEventListener("click",handler,true);
