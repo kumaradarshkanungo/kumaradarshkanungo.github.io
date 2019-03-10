@@ -52,8 +52,8 @@
                   <li><a><i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                     <li class="active"><a href="vendor.html">Vendors</a></li>
-                    <li><a href="#">Drivers</a></li>
-                    <li><a href="#">Users</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="users.html">Users</a></li>
                   </ul>
                   </li>
               </ul>
@@ -118,7 +118,7 @@
     
               <div class="clearfix"></div>
               <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="col-md-12 col-sm-12 col-xs-12" id="add_container">
                     <div class="x_panel">
                     <div class="x_content">
 
@@ -130,75 +130,68 @@
                             <a href="#step-1">
                                 <span class="step_no">1</span>
                                 <span class="step_descr">
-                                                Step 1<br />
-                                                <small>Details</small>
-                                            </span>
+                                    Step 1<br />
+                                    <small>Location</small>
+                                </span>
                             </a>
                             </li>
                             <li>
                             <a href="#step-2">
                                 <span class="step_no">2</span>
                                 <span class="step_descr">
-                                                Step 2<br />
-                                                <small>Location</small>
-                                            </span>
+                                    Step 2<br />
+                                    <small>Details</small>
+                                </span>
                             </a>
                             </li>
                             <li>
                             <a href="#step-3">
                                 <span class="step_no">3</span>
                                 <span class="step_descr">
-                                                Step 3<br />
-                                                <small>Food Items</small>
-                                            </span>
+                                    Step 3<br />
+                                    <small>Food Items</small>
+                                </span>
                             </a>
                             </li>
                         </ul>
-                        <div id="step-1">
-                            <form class="form-horizontal form-label-left">
+                        <div id="step-1" style="height:200px">
+                                <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                                <div id="map"></div>
+                            </div>
+                        <div id="step-2" style="display: none">
+                            <form class="form-horizontal form-label-left" id="detailForm">
 
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Name <span class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >Name <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="first-name" required class="form-control col-md-7 col-xs-12">
+                                <input type="text" id="name" required class="form-control col-md-7 col-xs-12" onkeyup="fnHandlerStep1()">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Contact No. <span class="required">*</span>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12" >Contact No. <span class="required">*</span>
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input type="text" id="last-name" name="last-name" required class="form-control col-md-7 col-xs-12">
+                                <input type="text" id="number" required class="form-control col-md-7 col-xs-12" onkeyup="fnHandlerStep1()">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Owner Name</label>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Owner Name</label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
-                                <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                                <input id="owner-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name" onkeyup="fnHandlerStep1()">
                                 </div>
                             </div>
                             <div class="form-group">
-                                    <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Owner Contact No.</label>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Owner Contact No.</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                                    <input id="owner-number" class="form-control col-md-7 col-xs-12" type="text" name="middle-name" onkeyup="fnHandlerStep1()">
                                     </div>
                             </div>
 
                             </form>
 
                         </div>
-                        <div id="step-2">
-                            <h2 class="StepTitle">Step 2 Content</h2>
-                            <p>
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                        <div id="step-3">
+                        <div id="step-3" style="display: none">
                             <h2 class="StepTitle">Step 3 Content</h2>
                             <p>
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
@@ -237,9 +230,6 @@
 
         <!-- footer content -->
         <footer>
-          <!-- <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div> -->
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
@@ -259,9 +249,10 @@
     <!-- morris.js -->
     <script src="./vendors/raphael/raphael.min.js"></script>
     <!-- jQuery Smart Wizard -->
-    <script src="./vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script>
+    <!-- <script src="./vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js"></script> -->
     
     <!-- Custom Theme Scripts -->
     <script src="./js/custom.js"></script>
+    <script src="./js/addVendor.js"></script>
   </body>
 </html>
