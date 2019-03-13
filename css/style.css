@@ -136,8 +136,11 @@ ul.panel_toolbox>li {
     min-width: 970px;
     height: 245px;
     overflow: hidden;
-    background-color: #171a29;
     color: #fff;
+}
+
+.vendor-header-wrapper{
+    background-color: #171a29;
 }
 
 .vendor-header .image{

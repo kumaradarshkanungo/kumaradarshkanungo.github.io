@@ -18,6 +18,7 @@
     <link href="./vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- jQuery custom content scroller -->
     <link href="./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+
     <!-- Custom Theme Style -->
     <link href="./css/custom.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
@@ -48,10 +49,10 @@
                       <li><a href="#">Submenu 3</a></li>
                   </ul> -->
                   </li>
-                  <li class="active"><a><i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu" style="display:block">
-                    <li><a href="vendor.html">Vendors</a></li>
-                    <li class="active current-page"><a href="drivers.html">Drivers</a></li>
+                  <li><a><i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li class="active"><a href="vendor.html">Vendors</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
                     <li><a href="users.html">Users</a></li>
                   </ul>
                   </li>
@@ -109,75 +110,14 @@
         <!-- page content -->
         <div class="right_col" role="main">
             <div class="">
-                <div class="row">
-                    <div class="x_panel">
-                        <div class="driver-image">
-                            <img src="./images/user.png" class="img h-150">
-                        </div>
-                        <div style="display:inline-block;position: absolute;right: 0;">
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Edit</button>
-                        </div>
-                        <div class="driver-details profile_details">
-                            <h3 id="driver_name"></h3>
-                            <span><i class="fa fa fa-phone"></i> &nbsp;&nbsp; 00000 00000</span><br />
-                            <span><i class="fa fa-birthday-cake"></i> &nbsp;&nbsp; 17 Mar 1992</span><br />
-                            <span><i class="fa fa-tasks"></i> &nbsp;&nbsp; 43 (Orders Completed)</span><br />
-                            <span><i class="fa fa-info-circle"></i> &nbsp;&nbsp; 05 Mar 2019 (Joining Date)</span>
-                            <div class=" profile_view emphasis">
-                                <p class="ratings">
-                                    <a href="#"><span class="fa fa-star"></span></a>
-                                    <a href="#"><span class="fa fa-star"></span></a>
-                                    <a href="#"><span class="fa fa-star"></span></a>
-                                    <a href="#"><span class="fa fa-star"></span></a>
-                                    <a href="#"><span class="fa fa-star-o"></span></a>
-                                    <a>4.0</a>
-                                </p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                <div class="clearfix"></div>
-
                 <div class="page-title">
-                    <div class="title_left">
-                        <h3 class="h3-title">Payments</h3>
-                    </div>
-                </div>
-
-                <div class="clearfix"></div>
-                
-                <div class="row">
-                    <div class="x_panel">
-                            <div class="x_title">
-                                <h2>Total Amount To be Collected : <span style="color:#000;font-weight:bold">₹24,900/-</span></h2>
-                                <ul class="nav navbar-right panel_toolbox pull-right">
-                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                                    </li>
-                                </ul>
-                                <button class="btn btn-success pull-right">Recieved</button>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="x_content">
-                                <h4>Previous Dues : <span style="color:#000;"><strike>₹3,000/-</strike></span> <span style="font-size:10px;vertical-align:middle">(collected)</span></h4>
-                                <h4>10 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹2,700/-</span></h4>
-                                <h4>11 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹4,100/-</span></h4>
-                                <h4>12 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹6,600/-</span></h4>
-                                <h4>13 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹1,600/-</span></h4>
-                                <h4>14 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹2,800/-</span></h4>
-                            </div>
-                    </div>
-                </div>
-
-                <div class="page-title">
-                        <div class="title_left">
-                            <h3 class="h3-title">Orders</h3>
-                        </div>
+                  <div class="title_left">
+                      <h3 class="h3-title">Orders</h3>
+                  </div>
                 </div>
     
                 <div class="clearfix"></div>
-                    
+    
                 <div class="row">
                     <div class="x_panel">
                         <div class="x_content">
@@ -280,67 +220,6 @@
       </div>
     </div>
 
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-        
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Edit Driver</h4>
-                </div>
-                <div class="modal-body">
-                    <form id="demo-form2" class="form-horizontal form-label-left" novalidate="">
-                        <div class="form-group text-center">
-                                <img src="./images/user(1).png" class="img img-round" style="height:80px" />
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
-                            </label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
-                            </label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Phone <span class="required">*</span></label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
-                            </label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Salary
-                                </label>
-                                <div class="col-md-8 col-sm-8 col-xs-12">
-                                <input id="birthday" class=" form-control col-md-7 col-xs-12" required="required" type="text">
-                                </div>
-                            </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-                  <button type="button" class="btn btn-default" type="reset">Reset</button>
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-        
-            </div>
-        </div>
-
     <!-- jQuery -->
     <script src="./vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -356,10 +235,15 @@
     
     <!-- Custom Theme Scripts -->
     <script src="./js/custom.js"></script>
-    <script>
-        var name = window.location.search.substring(1)
-        name = name.replace(/_/gi," ")
-        $("#driver_name").text(name);
-    </script>
+    <!-- <script>
+    $(function(){
+      document.addEventListener("click",handler,true);
+
+      function handler(e){
+          e.stopPropagation();
+          e.preventDefault();
+      }
+    })
+    </script> -->
   </body>
 </html>

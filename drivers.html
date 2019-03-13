@@ -47,20 +47,16 @@
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
               <ul class="nav side-menu">
-                  <li><a href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
-                  <!-- <ul class="nav child_menu">
-                      <li><a href="#">Submenu 1</a></li>
-                      <li><a href="#">Submenu 2</a></li>
-                      <li><a href="#">Submenu 3</a></li>
-                  </ul> -->
+                  <li><a href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a></li>
+                  <li>
+                    <a><i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="vendor.html">Vendors</a></li>
+                        <li class="active"><a href="drivers.html">Drivers</a></li>
+                        <li><a href="users.html">Users</a></li>
+                    </ul>
                   </li>
-                  <li><a><i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                    <li><a href="vendor.html">Vendors</a></li>
-                    <li class="active"><a href="drivers.html">Drivers</a></li>
-                    <li><a href="users.html">Users</a></li>
-                  </ul>
-                  </li>
+                  <li><a href="orders.html"><i class="fa fa-tasks"></i>Orders</a></li>
               </ul>
               </div>
       
@@ -117,6 +113,7 @@
               <div class="page-title">
                   <div class="title_left">
                       <h3 class="h3-title">Drivers</h3>
+                      <button class="btn btn-primary pull-right m-0 mt-5" data-toggle="modal" data-target="#myModal">Add Driver</button>
                   </div>
               </div>
     
@@ -125,8 +122,8 @@
               <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
-                        <div class="x_content">
-                        <table id="datatable-buttons" class="table table-striped table-bordered">
+                        <div class="x_content" >
+                        <table id="datatable-buttons" class="table table-striped table-bordered" style="visibility: hidden;">
                             <thead>
                             <tr>
                                 <th>Name</th>
@@ -672,6 +669,67 @@
       </div>
     </div>
 
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Add Driver</h4>
+            </div>
+            <div class="modal-body">
+                <form id="demo-form2" class="form-horizontal form-label-left" novalidate="">
+                    <div class="form-group text-center">
+                            <img src="./images/user(1).png" class="img img-round" style="height:80px" />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">First Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                        <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Last Name <span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                        <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Phone <span class="required">*</span></label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                        <input id="middle-name" class="form-control col-md-7 col-xs-12" type="text" name="middle-name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                        <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Salary
+                            </label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <input id="birthday" class=" form-control col-md-7 col-xs-12" required="required" type="text">
+                            </div>
+                        </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+              <button type="button" class="btn btn-default" type="reset">Reset</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+    
+        </div>
+    </div>
+
     <!-- jQuery -->
     <script src="./vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -703,6 +761,11 @@
     
     <!-- Custom Theme Scripts -->
     <script src="./js/custom.js"></script>
+    <script>
+    $(window).ready(function(){
+        $("table").css("visibility","visible")
+    })
+    </script>
     <!-- <script>
         setTimeout(function(){
             init_DataTables();
