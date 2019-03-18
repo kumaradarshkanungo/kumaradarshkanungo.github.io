@@ -18,9 +18,20 @@
     <link href="./vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- jQuery custom content scroller -->
     <link href="./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <!-- Switchery -->
+    <link href="./vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="./vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="./css/custom.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
+
+    <style>
+    .table>thead>tr>th, .table>tbody>tr>td, .table>tbody>tr>th{
+        text-align: center;
+        vertical-align: middle
+    }
+    </style>
   </head>
 
   <body class="nav-md">
@@ -151,22 +162,159 @@
                 <div class="row">
                     <div class="x_panel">
                             <div class="x_title">
-                                <h2>Total Amount To be Collected : <span style="color:#000;font-weight:bold">₹24,900/-</span></h2>
-                                <ul class="nav navbar-right panel_toolbox pull-right">
+                                <!-- <h2>Total Amount To be Collected : <span style="color:#000;font-weight:bold">₹24,900/-</span></h2> -->
+                                <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    <span></span> <b class="caret"></b>
+                                </div>
+                                <!-- <ul class="nav navbar-right panel_toolbox pull-right">
                                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                     </li>
-                                </ul>
-                                <button class="btn btn-success pull-right">Recieved</button>
+                                </ul> -->
+                                <!-- <button class="btn btn-success pull-right">Recieved</button> -->
                                 <div class="clearfix"></div>
                             </div>
-                            <div class="x_content">
+                            <!-- <div class="x_content">
                                 <h4>Previous Dues : <span style="color:#000;"><strike>₹3,000/-</strike></span> <span style="font-size:10px;vertical-align:middle">(collected)</span></h4>
                                 <h4>10 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹2,700/-</span></h4>
                                 <h4>11 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹4,100/-</span></h4>
                                 <h4>12 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹6,600/-</span></h4>
                                 <h4>13 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹1,600/-</span></h4>
                                 <h4>14 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹2,800/-</span></h4>
-                            </div>
+                            </div> -->
+                            <div class="x_content">
+                                <table class="table table-hover table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th rowspan="2">Date</th>
+                                      <th rowspan="2">Order No.</th>
+                                      <th rowspan="2">Vendor</th>
+                                      <th rowspan="1" colspan="2">Payment Mode</th>
+                                      <th rowspan="2">Distance <br/> Travelled</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Prepaid</th>
+                                        <th>Postpaid</th>
+                                    </tr>
+                                    <tr>
+
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th>15/03/2019</th>
+                                      <td>1010101123</td>
+                                      <td>vendor1</td>
+                                      <td>₹ 0</td>
+                                      <td>₹ 100</td>
+                                      <td>8 KM</td>
+                                    </tr>
+                                    <tr>
+                                    <th></th>
+                                    <td>1023451746</td>
+                                    <td>vendor2</td>
+                                    <td>₹ 0</td>
+                                    <td>₹ 300</td>
+                                    <td>5 KM</td>
+                                    </tr>
+                                    <tr>
+                                    <th></th>
+                                    <td>1023567345</td>
+                                    <td>vendor3</td>
+                                    <td>₹ 200</td>
+                                    <td>₹ 0</td>
+                                    <td>12 KM</td>
+                                    </tr>
+                                    <tr>
+                                    <th></th>
+                                    <td>1067328956</td>
+                                    <td>vendor4</td>
+                                    <td>₹ 0</td>
+                                    <td>₹ 350</td>
+                                    <td>17 KM</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total</th>
+                                        <th>4 No(s)</th>
+                                        <th></th>
+                                        <th>₹ 200</th>
+                                        <th>₹ 750</th>
+                                        <th>42 KM</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Amount to be collected</th>
+                                        <th>₹ 750</th>
+                                        <th>
+                                            <div class="">
+                                                <label>
+                                                    <input type="checkbox" class="js-switch" /> Collected
+                                                </label>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                            <th>16/03/2019</th>
+                                            <td>1010101123</td>
+                                            <td>vendor1</td>
+                                            <td>₹ 0</td>
+                                            <td>₹ 100</td>
+                                            <td>8 KM</td>
+                                          </tr>
+                                          <tr>
+                                          <th></th>
+                                          <td>1023451746</td>
+                                          <td>vendor2</td>
+                                          <td>₹ 0</td>
+                                          <td>₹ 300</td>
+                                          <td>5 KM</td>
+                                          </tr>
+                                          <tr>
+                                          <th></th>
+                                          <td>1023567345</td>
+                                          <td>vendor3</td>
+                                          <td>₹ 200</td>
+                                          <td>₹ 0</td>
+                                          <td>12 KM</td>
+                                          </tr>
+                                          <tr>
+                                          <th></th>
+                                          <td>1067328956</td>
+                                          <td>vendor4</td>
+                                          <td>₹ 0</td>
+                                          <td>₹ 350</td>
+                                          <td>17 KM</td>
+                                          </tr>
+                                          <tr>
+                                            <th>Total</th>
+                                            <th>4 No(s)</th>
+                                            <th></th>
+                                            <th>₹ 200</th>
+                                            <th>₹ 750</th>
+                                            <th>42 KM</th>
+                                        </tr>
+                                          <tr>
+                                              <th colspan="4">Amount to be collected</th>
+                                              <th>₹ 750</th>
+                                              <th>
+                                                  <div class="">
+                                                      <label>
+                                                          <input type="checkbox" class="js-switch" checked readonly /> Collected
+                                                      </label>
+                                                  </div>
+                                              </th>
+                                          </tr>
+                                          <tr style="background-color:rgb(38, 185, 154);color: #fff">
+                                            <th>Total</th>
+                                            <th>8 No(s)</th>
+                                            <th></th>
+                                            <th>₹ 400</th>
+                                            <th>₹ 1500</th>
+                                            <th>84 KM</th>
+                                          </tr>
+                                  </tbody>
+                                </table>
+            
+                              </div>
                     </div>
                 </div>
 
@@ -316,19 +464,33 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Aadhar Number <span class="required">*</span>
                             </label>
                             <div class="col-md-8 col-sm-8 col-xs-12">
-                            <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input id="aadhar" class="form-control col-md-7 col-xs-12" required="required" type="text">
                             </div>
                         </div>
                         <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Salary
-                                </label>
-                                <div class="col-md-8 col-sm-8 col-xs-12">
-                                <input id="birthday" class=" form-control col-md-7 col-xs-12" required="required" type="text">
-                                </div>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Driving Licence <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <input id="dlNo" class="form-control col-md-7 col-xs-12" required="required" type="text">
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Salary <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                            <input id="salary" class=" form-control col-md-7 col-xs-12" required="required" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Address <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <textarea id="message" required="required" class="form-control" name="message" ></textarea>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -353,6 +515,11 @@
     <script src="./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- morris.js -->
     <script src="./vendors/raphael/raphael.min.js"></script>
+    <!-- Switchery -->
+    <script src="./vendors/switchery/dist/switchery.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="./vendors/moment/min/moment.min.js"></script>
+    <script src="./vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     
     <!-- Custom Theme Scripts -->
     <script src="./js/custom.js"></script>
@@ -360,6 +527,14 @@
         var name = window.location.search.substring(1)
         name = name.replace(/_/gi," ")
         $("#driver_name").text(name);
+
+        // $(window).load(function(){
+        //     $('#reportrange span').on('DOMSubtreeModified',function(){
+        //         if($('#reportrange span').text())
+        //             alert($('#reportrange span').text())
+        //     })
+        // })
+        
     </script>
   </body>
 </html>

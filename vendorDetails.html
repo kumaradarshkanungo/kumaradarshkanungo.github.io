@@ -18,7 +18,10 @@
     <link href="./vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- jQuery custom content scroller -->
     <link href="./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
-
+    <!-- Switchery -->
+    <link href="./vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="./vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="./css/custom.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
@@ -28,6 +31,10 @@
         }
         .right_col,footer,.top_nav{
             min-width: 980px;
+        }
+        .table>thead>tr>th, .table>tbody>tr>td, .table>tbody>tr>th{
+            text-align: center;
+            vertical-align: middle
         }
     </style>
   </head>
@@ -245,6 +252,160 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="clearfix"></div>
+
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3 class="h3-title">Payments</h3>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+                
+                <div class="row">
+                    <div class="x_panel">
+                            <div class="x_title">
+                                <!-- <h2>Total Amount To be Collected : <span style="color:#000;font-weight:bold">₹24,900/-</span></h2> -->
+                                <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    <span></span> <b class="caret"></b>
+                                </div>
+                                <!-- <ul class="nav navbar-right panel_toolbox pull-right">
+                                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                    </li>
+                                </ul> -->
+                                <!-- <button class="btn btn-success pull-right">Recieved</button> -->
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- <div class="x_content">
+                                <h4>Previous Dues : <span style="color:#000;"><strike>₹3,000/-</strike></span> <span style="font-size:10px;vertical-align:middle">(collected)</span></h4>
+                                <h4>10 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹2,700/-</span></h4>
+                                <h4>11 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹4,100/-</span></h4>
+                                <h4>12 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹6,600/-</span></h4>
+                                <h4>13 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹1,600/-</span></h4>
+                                <h4>14 Mar 2019 &nbsp;&nbsp; : <span style="color:#000;">₹2,800/-</span></h4>
+                            </div> -->
+                            <div class="x_content">
+                                <table class="table table-hover table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th>Date</th>
+                                      <th>Order No.</th>
+                                      <th>Billed AMT.</th>
+                                      <th>Commision (10%)</th>
+                                      <th>Amount to <br/> be paid</th>
+                                    </tr>
+                                    <tr>
+
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th>15/03/2019</th>
+                                      <td>1010101123</td>
+                                      <td>₹ 500</td>
+                                      <td>₹ 50</td>
+                                      <td>₹ 450</td>
+                                    </tr>
+                                    <tr>
+                                    <th></th>
+                                    <td>1023451746</td>
+                                    <td>₹ 700</td>
+                                    <td>₹ 70</td>
+                                    <td>₹ 630</td>
+                                    </tr>
+                                    <tr>
+                                    <th></th>
+                                    <td>1023567345</td>
+                                    <td>₹ 200</td>
+                                    <td>₹ 20</td>
+                                    <td>₹ 180</td>
+                                    </tr>
+                                    <tr>
+                                    <th></th>
+                                    <td>1067328956</td>
+                                    <td>₹ 230</td>
+                                    <td>₹ 23</td>
+                                    <td>₹ 207</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Total</th>
+                                        <th>4 No(s)</th>
+                                        <th>₹ 1630</th>
+                                        <th>₹ 163</th>
+                                        <th>₹ 1467</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3">Amount to be paid</th>
+                                        <th>₹ 1467</th>
+                                        <th>
+                                            <div class="">
+                                                <label>
+                                                    <input type="checkbox" class="js-switch" /> Paid
+                                                </label>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>15/03/2019</th>
+                                        <td>1010101123</td>
+                                        <td>₹ 500</td>
+                                        <td>₹ 50</td>
+                                        <td>₹ 450</td>
+                                      </tr>
+                                      <tr>
+                                      <th></th>
+                                      <td>1023451746</td>
+                                      <td>₹ 700</td>
+                                      <td>₹ 70</td>
+                                      <td>₹ 630</td>
+                                      </tr>
+                                      <tr>
+                                      <th></th>
+                                      <td>1023567345</td>
+                                      <td>₹ 200</td>
+                                      <td>₹ 20</td>
+                                      <td>₹ 180</td>
+                                      </tr>
+                                      <tr>
+                                      <th></th>
+                                      <td>1067328956</td>
+                                      <td>₹ 230</td>
+                                      <td>₹ 23</td>
+                                      <td>₹ 207</td>
+                                      </tr>
+                                      <tr>
+                                          <th>Total</th>
+                                          <th>4 No(s)</th>
+                                          <th>₹ 1630</th>
+                                          <th>₹ 163</th>
+                                          <th>₹ 1467</th>
+                                      </tr>
+                                      <tr>
+                                          <th colspan="3">Amount to be paid</th>
+                                          <th>₹ 1467</th>
+                                          <th>
+                                              <div class="">
+                                                  <label>
+                                                      <input type="checkbox" class="js-switch" checked readonly /> Paid
+                                                  </label>
+                                              </div>
+                                          </th>
+                                      </tr>
+                                          <tr style="background-color:rgb(38, 185, 154);color: #fff">
+                                            <th>Total</th>
+                                            <th>8 No(s)</th>
+                                            <th>₹ 3260</th>
+                                            <th>₹ 326</th>
+                                            <th>₹ 2934</th>
+                                          </tr>
+                                  </tbody>
+                                </table>
+            
+                              </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -296,6 +457,11 @@
     <script src="./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- morris.js -->
     <script src="./vendors/raphael/raphael.min.js"></script>
+    <!-- Switchery -->
+    <script src="./vendors/switchery/dist/switchery.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="./vendors/moment/min/moment.min.js"></script>
+    <script src="./vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     
     <!-- Custom Theme Scripts -->
     <script src="./js/custom.js"></script>
