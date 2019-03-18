@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FoodLoop | Administrative Tool</title>
+    <link rel="icon" href="images/logo.ico" type="image/ico" >
+
+    <!-- Bootstrap -->
+    <link href="./vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="./vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="./vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- jQuery custom content scroller -->
+    <link href="./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet"/>
+    <!-- Switchery -->
+    <link href="./vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="./vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Custom Theme Style -->
+    <link href="./css/custom.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <style>
+        .table>thead>tr>th, .table>tbody>tr>td, .table>tbody>tr>th{
+            text-align: center;
+            vertical-align: middle
+        }
+    </style>
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        
+        <div class="col-md-3 left_col menu_fixed">
+          <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+              <a href="#" class="site_title"><img src="images/logo.ico" alt="logo"> <span>FoodLoop</span></a>
+          </div>
+      
+          <div class="clearfix"></div>
+      
+          <br />
+      
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+              <ul class="nav side-menu">
+                  <li><a href="dashboard.html"><i class="fa fa-home"></i>Dashboard</a>
+                  <!-- <ul class="nav child_menu">
+                      <li><a href="#">Submenu 1</a></li>
+                      <li><a href="#">Submenu 2</a></li>
+                      <li><a href="#">Submenu 3</a></li>
+                  </ul> -->
+                  </li>
+                  <li><a><i class="fa fa-user"></i> User Management <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li class="active"><a href="vendor.html">Vendors</a></li>
+                    <li><a href="drivers.html">Drivers</a></li>
+                    <li><a href="users.html">Users</a></li>
+                  </ul>
+                  </li>
+                <li><a href="orders.html"><i class="fa fa-tasks"></i>Orders</a></li>
+                <li><a href="analytics.html"><i class="fa fa-area-chart"></i>Analytics</a></li>
+              </ul>
+              </div>
+      
+          </div>
+          <!-- /sidebar menu -->
+      
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small">
+              <!-- <a data-toggle="tooltip" data-placement="top" title="Settings">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a> -->
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="index.html">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+          </div>
+          <!-- /menu footer buttons -->
+          </div>
+      </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+      
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.png" alt="">Admninistrator
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li><a href="index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                  <div class="title_left">
+                      <h3 class="h3-title">My Statement</h3>
+                  </div>
+                </div>
+    
+                <div class="clearfix"></div>
+    
+                <div class="row">
+                        <div class="x_panel">
+                                <div class="x_title">
+                                    <!-- <h2>Total Amount To be Collected : <span style="color:#000;font-weight:bold">₹24,900/-</span></h2> -->
+                                    <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                        <span></span> <b class="caret"></b>
+                                    </div>
+                                   <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <table class="table table-hover table-bordered">
+                                      <thead>
+                                        <tr>
+                                          <th>Date</th>
+                                          <th>SL No.</th>
+                                          <th>Vendor Name</th>
+                                          <th>No. of Orders</th>
+                                          <th>Billed AMT</th>
+                                          <th>Commision</th>
+                                          <th>Delivery Charge</th>
+                                          <th>Total Profit</th>
+                                        </tr>
+                                        <tr>
+    
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th>15/03/2019</th>
+                                          <td>1</td>
+                                          <td>Vendor 1 (10%)</td>
+                                          <td>12</td>
+                                          <td>₹ 30000</td>
+                                          <td>₹ 3000</td>
+                                          <td>₹ 240</td>
+                                          <td>₹ 3240</td>
+                                        </tr>
+                                        <tr>
+                                        <th></th>
+                                        <td>2</td>
+                                        <td>Vendor 2 (15%)</td>
+                                        <td>30</td>
+                                        <td>₹ 50000</td>
+                                        <td>₹ 7500</td>
+                                        <td>₹ 750</td>
+                                        <td>₹ 8200</td>
+                                        </tr>
+                                        <tr>
+                                        <th></th>
+                                        <td>3</td>
+                                        <td>Vendor 3 (25%)</td>
+                                        <td>25</td>
+                                        <td>₹ 40000</td>
+                                        <td>₹ 10000</td>
+                                        <td>₹ 625</td>
+                                        <td>₹ 10625</td>
+                                        </tr>
+                                        <tr>
+                                        <th></th>
+                                        <td>4</td>
+                                        <td>Vendor 4 (17%)</td>
+                                        <td>14</td>
+                                        <td>₹ 35000</td>
+                                        <td>₹ 5950</td>
+                                        <td>₹ 350</td>
+                                        <td>₹ 6300</td>
+                                        </tr>
+                                        <tr style="height:35px">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>15/03/2019</th>
+                                            <td>1</td>
+                                            <td>Vendor 1 (10%)</td>
+                                            <td>12</td>
+                                            <td>₹ 30000</td>
+                                            <td>₹ 3000</td>
+                                            <td>₹ 240</td>
+                                            <td>₹ 3240</td>
+                                            </tr>
+                                            <tr>
+                                            <th></th>
+                                            <td>2</td>
+                                            <td>Vendor 2 (15%)</td>
+                                            <td>30</td>
+                                            <td>₹ 50000</td>
+                                            <td>₹ 7500</td>
+                                            <td>₹ 750</td>
+                                            <td>₹ 8200</td>
+                                            </tr>
+                                            <tr>
+                                            <th></th>
+                                            <td>3</td>
+                                            <td>Vendor 3 (25%)</td>
+                                            <td>25</td>
+                                            <td>₹ 40000</td>
+                                            <td>₹ 10000</td>
+                                            <td>₹ 625</td>
+                                            <td>₹ 10625</td>
+                                            </tr>
+                                            <tr>
+                                            <th></th>
+                                            <td>4</td>
+                                            <td>Vendor 4 (17%)</td>
+                                            <td>14</td>
+                                            <td>₹ 35000</td>
+                                            <td>₹ 5950</td>
+                                            <td>₹ 350</td>
+                                            <td>₹ 6300</td>
+                                            </tr>
+                                        <tr style="background-color:rgb(38, 185, 154);color: #fff">
+                                            <th>Total</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th>162</th>
+                                            <th>₹ 155000</th>
+                                            <th>₹ 52900</th>
+                                            <th>₹ 3930</th>
+                                            <th>₹ 56830</th>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                
+                                  </div>
+                            </div>
+                          </div>
+            </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="./vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="./vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="./vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="./vendors/nprogress/nprogress.js"></script>
+    <!-- jQuery custom content scroller -->
+    <script src="./vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- morris.js -->
+    <script src="./vendors/raphael/raphael.min.js"></script>
+    <!-- Switchery -->
+    <script src="./vendors/switchery/dist/switchery.min.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="./vendors/moment/min/moment.min.js"></script>
+    <script src="./vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Custom Theme Scripts -->
+    <script src="./js/custom.js"></script>
+  </body>
+</html>
